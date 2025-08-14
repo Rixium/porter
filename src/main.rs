@@ -9,7 +9,14 @@ struct Cli {
 
 #[derive(Subcommand, Debug)]
 enum Command {
+    Create(CreateArgs),
     Add(AddArgs),
+}
+
+#[derive(Args, Debug)]
+struct CreateArgs {
+    #[arg(short('n'), long("name"))]
+    name: String,
 }
 
 #[derive(Args, Debug)]
