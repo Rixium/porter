@@ -8,7 +8,7 @@ Porter is intended to be used to store a repository of developer knowledge often
 
 ## Why Porter?
 
-Originall it was intended to be called dock because the aim was to store large numbers of easy to search and edit documentation (think cargo containers).. but that was a bit too much like docker, so now it's called porter, which is like port, which is kind of the same thing, but feel free to interpret it however you like.
+Originally it was intended to be called dock because the aim was to store large numbers of easy to search and edit documentation (think cargo containers).. but that was a bit too much like docker, so now it's called porter, which is like port, which is kind of the same thing, but feel free to interpret it however you like.
 
 ## What's it solving?
 
