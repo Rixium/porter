@@ -1,32 +1,10 @@
-use clap::{Args, Parser, Subcommand};
+use clap::Parser;
 
-#[derive(Parser, Debug)]
-#[command(version("0.1.0"), about("porter"))]
-struct Cli {
-    #[command(subcommand)]
-    command: Option<Command>,
-}
-
-#[derive(Subcommand, Debug)]
-enum Command {
-    Create(CreateArgs),
-    Add(AddArgs),
-}
-
-#[derive(Args, Debug)]
-struct CreateArgs {
-    #[arg(short('n'), long("name"))]
-    name: String,
-}
-
-#[derive(Args, Debug)]
-struct AddArgs {
-    #[arg(short('n'), long("name"))]
-    name: String,
-}
+mod commands;
+use commands::cli::{Cli, Command};
 
 fn main() {
-    let cli_args = Cli::parse();
+    let cli_args: Cli = Cli::parse();
 
     match &cli_args.command {
         Some(Command::Add(add_args)) => {
